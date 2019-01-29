@@ -20,15 +20,6 @@ public class UnsubscribePOM {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(id = "login")
-	private WebElement userName;
-
-	@FindBy(id = "password")
-	private WebElement password;
-
-	@FindBy(id = "formLogin_submitAuth")
-	private WebElement loginBtn;
-	
 	@FindBy(xpath = "//a[@title='My courses']")
 	private WebElement mycoursetab;
 	//a[contains(text(),'sert')]
@@ -42,7 +33,7 @@ public class UnsubscribePOM {
 	
 	@FindBy(xpath="//*[@name='user[]']")
 	private WebElement userlist;
-	private List<WebElement> getElementsAsList("//*[@name='user[]']", String type);
+	//private List<WebElement> getElementsAsList("//*[@name='user[]']", String type);
 	
 	@FindBy(xpath = "//input[@value='103']")
 	private WebElement userid;
@@ -55,21 +46,6 @@ public class UnsubscribePOM {
 	@FindBy(xpath = "//div[@class='alert alert-info']")
 	private WebElement msg;
 	
-	
-	public void sendUserName(String userName) {
-		this.userName.clear();
-		this.userName.sendKeys(userName);
-	}
-
-	public void sendPassword(String password) {
-		this.password.clear();
-		this.password.sendKeys(password);
-	}
-
-	public void clickLoginBtn() {
-		this.loginBtn.click(); 
-		
-	}
 	
 	public void mycoursetab() {
 		System.out.println("Clicked on mycourse tab");
@@ -88,17 +64,17 @@ public class UnsubscribePOM {
 
 	public void clickuserid() {
 		System.out.println("unscubscribe user is in progress");
-		//this.userid.click();
+		this.userid.click();
 		
 		
-		  List<WebElement> checkboxes[] = driver.findElements(userlist);
+		  //List<WebElement> checkboxes[] = driver.findElements(userlist);
 		  
-		  System.out.println(checkboxes.size());
+		  //System.out.println(checkboxes.size());
 		  
-		  for(int i=0; i<= checkboxes.size() ; i++) {
-		   if(checkboxes.get(i).getAttribute("value").equals("103"))
-			   checkboxes.get(i).click();
-		   }
+		  //for(int i=0; i<= checkboxes.size() ; i++) {
+		   //if(checkboxes.get(i).getAttribute("value").equals("103"))
+			//   checkboxes.get(i).click();
+		  // }
 
 		System.out.println("Clicked user id checkbox");
 		//this.userlist.click();

@@ -28,6 +28,7 @@ public class UnSubscribe {
 	private WebDriver driver;
 	private String baseUrl;
 	private UnsubscribePOM unsubspom;
+	private ELoginPOM loginpom;
 	private GenericMethods gen;
 	private static Properties properties;
 	private ScreenShot screenShot;
@@ -51,6 +52,7 @@ public class UnSubscribe {
   public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		unsubspom = new UnsubscribePOM(driver); 
+		loginpom = new ELoginPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -61,9 +63,9 @@ public class UnSubscribe {
   @Test (priority = 1)
 	public void validLoginTest() 
 	{
-	  unsubspom.sendUserName("mthangavelu123");
-	  unsubspom.sendPassword("malar123");
-	  unsubspom.clickLoginBtn(); 
+	  loginpom.sendUserName("mthangavelu123");
+	  loginpom.sendPassword("malar123");
+	  loginpom.clickLoginBtn(); 
 		
 	}
   

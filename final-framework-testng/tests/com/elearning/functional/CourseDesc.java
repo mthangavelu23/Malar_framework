@@ -27,6 +27,7 @@ public class CourseDesc {
 	private WebDriver driver;
 	private String baseUrl;
 	private CourseDescPOM coursedescPOM;
+	private ELoginPOM loginpom;
 	private GenericMethods gen;
 	private static Properties properties;
 	private ScreenShot screenShot;
@@ -50,6 +51,7 @@ public class CourseDesc {
   public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		coursedescPOM = new CourseDescPOM(driver); 
+		loginpom = new ELoginPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -60,9 +62,9 @@ public class CourseDesc {
   @Test (priority = 1)
 	public void validLoginTest() 
 	{
-	  coursedescPOM.sendUserName("mthangavelu123");
-	  coursedescPOM.sendPassword("malar123");
-	  coursedescPOM.clickLoginBtn(); 
+	  loginpom.sendUserName("mthangavelu123");
+	  loginpom.sendPassword("malar123");
+	  loginpom.clickLoginBtn(); 
 		
 	}
   

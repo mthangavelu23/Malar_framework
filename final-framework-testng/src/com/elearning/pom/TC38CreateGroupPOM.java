@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.training.utility.Driver;
 
-public class CourseDescPOM {
+public class TC38CreateGroupPOM {
 
 	private WebDriver driver;
 
-	public CourseDescPOM(WebDriver driver) {
+	public TC38CreateGroupPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}

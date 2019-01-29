@@ -26,6 +26,7 @@ public class AddCourse {
 	private WebDriver driver;
 	private String baseUrl;
 	private AddCoursePOM addcoursePOM;
+	private ELoginPOM loginpom;
 	private GenericMethods gen;
 	private static Properties properties;
 	private ScreenShot screenShot;
@@ -50,6 +51,7 @@ public class AddCourse {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		addcoursePOM = new AddCoursePOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
+		loginpom = new ELoginPOM(driver);
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
@@ -59,9 +61,9 @@ public class AddCourse {
   @Test (priority = 1)
 	public void validLoginTest() 
 	{
-	  addcoursePOM.sendUserName("mthangavelu123");
-	  addcoursePOM.sendPassword("malar123");
-	  addcoursePOM.clickLoginBtn(); 
+	  loginpom.sendUserName("mthangavelu111");
+	  loginpom.sendPassword("malar111");
+	  loginpom.clickLoginBtn(); 
 		
 	}
   
@@ -69,12 +71,12 @@ public class AddCourse {
   public void createCourseTest() throws InterruptedException
   {
 	  addcoursePOM.clickCourselink();
-	  addcoursePOM.sendcourse("felenium4");
+	  addcoursePOM.sendcourse("felenium7");
 	  addcoursePOM.advanceds();
-	  addcoursePOM.sendcategory();//how to choose values from list box
+	  //addcoursePOM.sendcategory();//how to choose values from list box
 	  Thread.sleep(3000);
 	  addcoursePOM.sendcoursecategory("(PROJ) Projects");
-	  addcoursePOM.sendcoursecode("fele4");
+	  addcoursePOM.sendcoursecode("fele7");
 	 addcoursePOM.sendlanguage("English");
 	  addcoursePOM.clickcoursesubmit();
 	  //String expected = "melenium8";

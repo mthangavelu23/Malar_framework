@@ -70,8 +70,8 @@ public class LoginTest<screenShot> {
 	@Test (priority = 1)
 	public void validLoginTest() 
 	{
-		loginPOM.sendUserName("mthangavelu456");
-		loginPOM.sendPassword("malar456");
+		loginPOM.sendUserName("mthangavelu111");
+		loginPOM.sendPassword("malar111");
 		loginPOM.clickLoginBtn(); 
 		//WebElement ele = gen.getElement("//div[@class='normal-message']//p[1]\","css");
 	}

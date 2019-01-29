@@ -17,15 +17,6 @@ public class AddCoursePOM {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(id = "login")
-	private WebElement userName;
-
-	@FindBy(id = "password")
-	private WebElement password;
-
-	@FindBy(id = "formLogin_submitAuth")
-	private WebElement loginBtn;
-
 	@FindBy(xpath = "//a[contains(text(),'Create a course')]")
 	private WebElement courselink;
 
@@ -36,8 +27,8 @@ public class AddCoursePOM {
 	private WebElement advanceds;
 
 	
-	@FindBy(xpath ="//*[@title='()']")
-	private WebElement category;
+	//@FindBy(xpath ="//*[@title='()']")
+	//private WebElement category;
 	
 
 	@FindBy(id ="add_course_category_code")
@@ -71,16 +62,6 @@ public class AddCoursePOM {
 	@FindBy(xpath = "//div[contains(text(),'Intro was updated')]")
 	private WebElement introupdated;
 
-	public void sendUserName(String userName) {
-		this.userName.clear();
-		this.userName.sendKeys(userName);
-	}
-
-	public void sendPassword(String password) {
-		this.password.clear();
-		this.password.sendKeys(password);
-	}
-
 	public void clickCourselink() {
 		this.courselink.click();
 	}
@@ -95,12 +76,12 @@ public class AddCoursePOM {
 		this.advanceds.click();
 	}
 
-	public void sendcategory() {
+	//public void sendcategory() {
 		
-		this.category.click();
-		System.out.println("category is clicked");
+		//this.category.click();
+	//	System.out.println("category is clicked");
 
-	}
+	//}
 
 	public void sendcoursecategory(String categorylist) {
 		System.out.println("category is selecting");
@@ -177,9 +158,5 @@ public class AddCoursePOM {
 		
 	}
 
-	public void clickLoginBtn() {
-		this.loginBtn.click(); 
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

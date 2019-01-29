@@ -20,101 +20,43 @@ public class CoursesListPOM {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(id = "login")
-	private WebElement userName;
-
-	@FindBy(id = "password")
-	private WebElement password;
-
-	@FindBy(id = "formLogin_submitAuth")
-	private WebElement loginBtn;
-	
-	@FindBy(xpath = "//a[@title='My courses']")
-	private WebElement mycoursetab;
-	//a[contains(text(),'sert')]
-	
-	@FindBy(xpath = "//a[contains(text(),'serrf')]")
-	private WebElement coursetitlelnk;
-	
-	@FindBy(id = "toolimage_9141")
-	private WebElement usericon;
-	
-	
-	@FindBy(id = "form_student_list_id")
-	private By userlist;
-	
-	
-	//@FindBy(xpath = "//input[@value='103']")
-	//private WebElement userid;
-	
-	//tr[@class='row_odd']//a[contains(@title,'Unsubscribe')][contains(text(),'Unsubscribe')]
-	
-	@FindBy(xpath = "//tr[@class='row_even row_selected']//a[contains(@title,'Unsubscribe')][contains(text(),'Unsubscribe')]")
-	private WebElement unsubscribe;
-	
-	@FindBy(xpath = "//div[@class='alert alert-info']")
-	private WebElement msg;
-	
-	
-	public void sendUserName(String userName) {
-		this.userName.clear();
-		this.userName.sendKeys(userName);
-	}
-
-	public void sendPassword(String password) {
-		this.password.clear();
-		this.password.sendKeys(password);
-	}
-
-	public void clickLoginBtn() {
-		this.loginBtn.click(); 
 		
-	}
 	
-	public void mycoursetab() {
-		System.out.println("Clicked on mycourse tab");
-		this.mycoursetab.click();
-	}
+	@FindBy(xpath = "//a[contains(text(),'Course catalog')]")
+	private WebElement coursecat;
 	
-	public void clickoncourse() {
+	@FindBy(name="search_term")
+	//input[@name='search_term']
+	private WebElement searchterm;
+	
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement searchbutton;
+	
+	@FindBy(xpath = "//a[contains(text(),'aelenium6')]")
+	private WebElement coursedetails;
+	
+	
+	
+	public void clickoncoursecat() {
 		System.out.println("Click on course");
-		this.coursetitlelnk.click();
+		this.coursecat.click();
 	}
 
-	public void clickusericon() {
+	public void sendsearchtxt(String srchtxt) {
 		System.out.println("Clicked user icon");
-		this.usericon.click();
-	}
-
-	public void clickuserid() {
-		  java.util.List<WebElement> ListOfCheckBoxes = driver.findElements(userlist);
-		  System.out.println("Number of check boxes pesent are: "+ListOfCheckBoxes.size());
-		  
-		  for(int i=0; i< ListOfCheckBoxes.size() ; i++) {
-		   if(ListOfCheckBoxes.get(i).getAttribute("value").equals("103"))
-		    ListOfCheckBoxes.get(i).click();
-		   }
-
-		System.out.println("Clicked user id checkbox");
-		//this.userlist.click();
-	}
-	public void unsubscribe() {
-		System.out.println("Clicked unsubscribe");
-		this.unsubscribe.click();
+		this.searchterm.clear();
+		this.searchterm.sendKeys(srchtxt);
 	}
 	
-	
-	public void handleAlert()
-	{
-		Alert alert = driver.switchTo().alert();
-		alert.accept();
-			
+	public void clickonsearch() {
+		System.out.println("Click on search");
+		this.searchbutton.click();
 	}
 	
-	
+		
 	public String getcoursetext()
 	{
-		String str1 = this.msg.getText();
+		String str1 = this.coursedetails.getText();
 		System.out.println(str1);
 		return str1;
 		
