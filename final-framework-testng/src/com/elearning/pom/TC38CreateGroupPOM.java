@@ -19,64 +19,105 @@ public class TC38CreateGroupPOM {
 	}
 
 	
-	@FindBy(xpath = "//a[@title='My courses']")
-	private WebElement mycoursetab;
+	@FindBy(xpath = "//img[@id='toolimage_84']")
+	private WebElement groupicon;
+	
+	@FindBy(xpath = "//img[@title='Create new group(s)']")
+	private WebElement createnewgroup;
+	
+	@FindBy(xpath = "//input[@id='create_groups_number_of_groups']")
+	private WebElement entergroupcount;
+	
+	@FindBy(xpath = "//button[@id='create_groups_submit']")
+	private WebElement proceedgroup;
+	@FindBy(xpath = "//img[@title='Group members']")
+	private WebElement addgroupmember;
+	@FindBy(xpath = "//button[@id='create_groups_step2_submit']")
+	private WebElement creategroupsubmit;
 	
 	
-	@FindBy(xpath = "//img[@title='aelenium']")
-	private WebElement coursetitlelnk;
-	
-	@FindBy(id = "tooldesc_8842")
-	private WebElement coursedescicon;
+	//need to see how to identify the correct row and then click on the add group member icon
+	//@FindBy(xpath = "//tbody//tr[2]//td[5]//a[3]//img[1]")
+	//private WebElement addgroupmembers;
 	
 	
-	@FindBy(xpath = "//img[@title='Description']")
-	private WebElement descicon;
+	@FindBy(name="group_0_name")
+	private WebElement groupnametxt;
 	
+//chk thi sxpath
+	@FindBy(xpath = "//*[@id='group_members-f[]")
+	private WebElement groupmembers;
 	
-	@FindBy(id = "course_description_title")
-	private WebElement coursetitletxt;
+	@FindBy(xpath = "//*[@name='add']")
+	private WebElement addbutton;
+	@FindBy(xpath = "//*[@name='remove']")
+	private WebElement removebutton;
+	
+	@FindBy(xpath = "//*[@id='group_edit_submit']")
+	private WebElement savesettings1;
+	
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	private WebElement alertmsg;
+	
+	@FindBy(xpath = "//tr[@class='row_even']//img[@title='Edit this group']")
+	private WebElement clkedit;
+	
+	@FindBy(xpath = "//*[@id='qf_eac2d4']")
+	private WebElement chklearnerregister;
+	
+	@FindBy(xpath = "//*[@id='qf_6c3e82']")
+	private WebElement chklearnerunregister;
+	
+	public void clickgroupicon() {
+		this.groupicon.click(); 
 		
-	@FindBy(xpath = "//*[@id='cke_1_contents']//iframe")
-	private WebElement coursedesctxt;
-	
-	@FindBy(xpath = "//button[@id='course_description_submit']")
-	private WebElement savebutton;
-	
-	@FindBy(xpath = "//div[@class='alert alert-info']")
-	private WebElement alerttxt;
-	
-	
-	
-	public void mycoursetab() {
-		this.mycoursetab.click();
+	}
+		
+	public void createnewgroup() {
+		this.createnewgroup.click(); 
+		
 	}
 	
-	public void clickCoursetitle() {
-		System.out.println("Clicked course title");
-		this.coursetitlelnk.click();
+	
+	public void groupcount(String i) {
+		this.entergroupcount.clear();
+		this.entergroupcount.sendKeys(i);
+	}
+	
+	public void proceedgroup() {
+		this.proceedgroup.click(); 
+		
 	}
 
-	public void clickcoursedescicon() {
-		this.coursedescicon.click(); 
+	public void entergrouptext(String grptxt) {
+		this.groupnametxt.clear();
+		this.groupnametxt.sendKeys(grptxt);
+	}
+	
+	public void submitnewgroup() {
+		this.creategroupsubmit.click();
 		
 	}
 	
-	public void clickdescicon() {
-		this.descicon.click(); 
-		
+	public void clickaddgroupmember() {
+		this.addgroupmember.click(); 
 	}
 	
 	
-	public void sendtitle(String title) {
-		this.coursetitletxt.clear();
-		this.coursetitletxt.sendKeys(title);
+	
+	public void selectgroupmember(String groupmem)
+	{
+		Select sel = new Select(this.groupmembers);
+		sel.selectByVisibleText(groupmem);
 	}
 	
+	public void savesettings() {
+		this.savesettings1.click(); 
+	}
 	
 	public void senddesc(String valuetobody)
 	{
-		driver.switchTo().frame(coursedesctxt);
+		//driver.switchTo().frame(coursedesctxt);
 		WebElement body=driver.switchTo().activeElement();
 		body.clear();
 		body.sendKeys(valuetobody);
@@ -84,21 +125,12 @@ public class TC38CreateGroupPOM {
 			
 	}
 	
-	public void clicksavebutton() {
-		this.savebutton.click(); 
 		
-	}
 	
-	public String handleAlert()
-	{
-		Alert alert = driver.switchTo().alert();
-		String str1 = alert.getText();
-		return str1;
-	}
 	
-	public String getcoursetext()
+	public String alerttext()
 	{
-		String str1 = this.alerttxt.getText();
+		String str1 = this.alertmsg.getText();
 		System.out.println(str1);
 		return str1;
 		

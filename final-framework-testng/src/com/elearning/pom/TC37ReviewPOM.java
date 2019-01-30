@@ -46,6 +46,16 @@ public class TC37ReviewPOM {
 		this.resultfeedback.click();
 	}
 	
+	
+	public void rtarrowclk()
+	{
+		this.rtarrowicon.click();
+		Actions actions = new Actions(driver);
+		//WebElement mainMenu = driver.findElement(By.linkText("menulink"));
+		System.out.println("Doing mouse over");
+		this.rtarrowicon.click();
+		actions.moveToElement(this.rtarrowicon).click().perform();
+		}
 	public void gradeact()
 	{
 		this.gradeactivity.click();
@@ -56,7 +66,7 @@ public class TC37ReviewPOM {
 	
 		Actions actions = new Actions(driver);
 		System.out.println("Doing mouse over");
-		Actions status = actions.moveToElement(this.validated).;//how to get inner text of mouse over element	
+		Actions status = actions.moveToElement(this.validated);//how to get inner text of mouse over element	
 		String str1 = status.toString();
 		return str1;
 		}

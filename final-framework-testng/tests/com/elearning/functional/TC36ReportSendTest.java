@@ -28,6 +28,7 @@ public class TC36ReportSendTest<screenShot> {
 	private CourseDescPOM coursedescPOM;
 	private AddCoursePOM addcoursePOM;
 	private ReportSendPOM reportsendpom;
+	
 	private GenericMethods gen;
 	private static Properties properties;
 	private ScreenShot screenShot;

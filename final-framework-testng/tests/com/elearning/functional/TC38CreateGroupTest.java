@@ -16,6 +16,7 @@ import com.elearning.pom.CourseDescPOM;
 import com.elearning.pom.ELoginPOM;
 import com.elearning.pom.ReportSendPOM;
 import com.elearning.pom.TC37ReviewPOM;
+import com.elearning.pom.TC38CreateGroupPOM;
 import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
 import com.training.utility.DriverFactory;
@@ -30,6 +31,7 @@ public class TC38CreateGroupTest {
 	private AddCoursePOM addcoursePOM;
 	private ReportSendPOM reportsendpom;
 	private TC37ReviewPOM tc36reviewpom;
+	private TC38CreateGroupPOM tc38creategrouppom;
 	private GenericMethods gen;
 	private static Properties properties;
 	private ScreenShot screenShot;
@@ -55,36 +57,55 @@ public class TC38CreateGroupTest {
 		loginPOM = new ELoginPOM(driver);
 		reportsendpom = new ReportSendPOM(driver);
 		tc36reviewpom = new TC37ReviewPOM(driver);
+		tc38creategrouppom = new TC38CreateGroupPOM(driver);
 		
 	}
 	
 	@Test (priority = 1)
-	public void ReportCorrectTest() throws Exception 
+	public void CreateGroupTest() throws Exception 
 	{
 		loginPOM.sendUserName("mthangavelu111");
 		loginPOM.sendPassword("malar111");
 		loginPOM.clickLoginBtn(); 
 		reportsendpom.mycoursetab();
 		reportsendpom.courselink();
-		tc36reviewpom.testiconclk();
-		tc36reviewpom.resultfeedbackclk();
-		tc36reviewpom.gradeact();
-		reportsendpom.sendemailchkbox();
-		reportsendpom.correcttestclk();
-		String expected = "Validated";
-		String actual = tc36reviewpom.mouseovertxt();
-		assertEquals(actual, expected);
+		tc38creategrouppom.clickgroupicon();
+		tc38creategrouppom.createnewgroup();
+		tc38creategrouppom.groupcount("1");
+		tc38creategrouppom.proceedgroup();
+		
+		}
+	
+	@Test (priority = 2)
+	public void CreateNewGroupTest() throws Exception 
+	{
+		tc38creategrouppom.entergrouptext("Felenium");
+		tc38creategrouppom.submitnewgroup();
 		
 			}
-	
-	@AfterClass
+	@Test (priority = 3)
+	public void SelectGroupmemberTest() throws Exception 
+	{
+		tc38creategrouppom.clickaddgroupmember();
+		tc38creategrouppom.selectgroupmember("Ashwin karthi (Ashwin111) - ASHWIN111");
+		tc38creategrouppom.savesettings();
+		
+	}
+	@Test (priority = 4)
+	public void GroupAssertTest() throws Exception 
+	{
+		String expected = "Group settings modified";
+		String actual = tc38creategrouppom.alerttext();
+		assertEquals(actual, expected);
+		
+	}
+		
+		
+		@AfterClass
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		driver.quit();
 	}
 		
-	
-	
-	
 	
 }
