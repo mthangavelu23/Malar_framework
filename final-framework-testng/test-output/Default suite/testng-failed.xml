@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.elearning.functional.TC35ReportSendTest">
+      <class name="com.elearning.functional.TC38CreateGroupTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="ReportCorrectTest"/>
+          <include name="EditGroupTest"/>
           <include name="setUpBeforeClass"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.elearning.functional.TC35ReportSendTest -->
+      </class> <!-- com.elearning.functional.TC38CreateGroupTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

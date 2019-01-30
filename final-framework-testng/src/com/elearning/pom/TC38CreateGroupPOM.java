@@ -30,8 +30,12 @@ public class TC38CreateGroupPOM {
 	
 	@FindBy(xpath = "//button[@id='create_groups_submit']")
 	private WebElement proceedgroup;
+	
+	
+	//chk how to click on specific group member icon( handling href )
 	@FindBy(xpath = "//img[@title='Group members']")
 	private WebElement addgroupmember;
+	
 	@FindBy(xpath = "//button[@id='create_groups_step2_submit']")
 	private WebElement creategroupsubmit;
 	
@@ -45,11 +49,12 @@ public class TC38CreateGroupPOM {
 	private WebElement groupnametxt;
 	
 //chk thi sxpath
-	@FindBy(xpath = "//*[@id='group_members-f[]")
+	@FindBy(name = "group_members-f[]")
 	private WebElement groupmembers;
 	
 	@FindBy(xpath = "//*[@name='add']")
 	private WebElement addbutton;
+	
 	@FindBy(xpath = "//*[@name='remove']")
 	private WebElement removebutton;
 	
@@ -62,10 +67,10 @@ public class TC38CreateGroupPOM {
 	@FindBy(xpath = "//tr[@class='row_even']//img[@title='Edit this group']")
 	private WebElement clkedit;
 	
-	@FindBy(xpath = "//*[@id='qf_eac2d4']")
+	@FindBy(xpath="//label[contains(text(),'Learners are allowed to self-register in groups')]")
 	private WebElement chklearnerregister;
 	
-	@FindBy(xpath = "//*[@id='qf_6c3e82']")
+	@FindBy(xpath="//label[contains(text(),'Learners are allowed to unregister themselves from')]")
 	private WebElement chklearnerunregister;
 	
 	public void clickgroupicon() {
@@ -107,8 +112,14 @@ public class TC38CreateGroupPOM {
 	
 	public void selectgroupmember(String groupmem)
 	{
+		this.groupmembers.click();
 		Select sel = new Select(this.groupmembers);
 		sel.selectByVisibleText(groupmem);
+	}
+	
+	public void addmember() {
+		System.out.println("Clicking on add member button");
+		this.addbutton.click(); 
 	}
 	
 	public void savesettings() {
@@ -126,7 +137,15 @@ public class TC38CreateGroupPOM {
 	}
 	
 		
-	
+	public void clickediticon() {
+		this.clkedit.click(); 
+	}
+	public void learnerregister() {
+		this.chklearnerregister.click(); 
+	}
+	public void learnerunregsiter() {
+		this.chklearnerunregister.click(); 
+	}
 	
 	public String alerttext()
 	{

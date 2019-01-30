@@ -30,7 +30,7 @@ public class TC38CreateGroupTest {
 	private CourseDescPOM coursedescPOM;
 	private AddCoursePOM addcoursePOM;
 	private ReportSendPOM reportsendpom;
-	private TC37ReviewPOM tc36reviewpom;
+	private TC37ReviewPOM tc37reviewpom;
 	private TC38CreateGroupPOM tc38creategrouppom;
 	private GenericMethods gen;
 	private static Properties properties;
@@ -56,7 +56,7 @@ public class TC38CreateGroupTest {
 		coursedescPOM = new CourseDescPOM(driver);
 		loginPOM = new ELoginPOM(driver);
 		reportsendpom = new ReportSendPOM(driver);
-		tc36reviewpom = new TC37ReviewPOM(driver);
+		tc37reviewpom = new TC37ReviewPOM(driver);
 		tc38creategrouppom = new TC38CreateGroupPOM(driver);
 		
 	}
@@ -79,26 +79,37 @@ public class TC38CreateGroupTest {
 	@Test (priority = 2)
 	public void CreateNewGroupTest() throws Exception 
 	{
-		tc38creategrouppom.entergrouptext("Felenium");
+		tc38creategrouppom.entergrouptext("Kelenium");
 		tc38creategrouppom.submitnewgroup();
 		
 			}
 	@Test (priority = 3)
 	public void SelectGroupmemberTest() throws Exception 
 	{
+		
 		tc38creategrouppom.clickaddgroupmember();
 		tc38creategrouppom.selectgroupmember("Ashwin karthi (Ashwin111) - ASHWIN111");
+		tc38creategrouppom.addmember();
 		tc38creategrouppom.savesettings();
-		
-	}
-	@Test (priority = 4)
-	public void GroupAssertTest() throws Exception 
-	{
 		String expected = "Group settings modified";
 		String actual = tc38creategrouppom.alerttext();
 		assertEquals(actual, expected);
 		
 	}
+	@Test (priority = 4)
+	public void EditGroupTest() throws Exception 
+	{
+		tc38creategrouppom.clickediticon();
+		tc38creategrouppom.learnerregister();
+		tc38creategrouppom.learnerunregsiter();
+		tc38creategrouppom.savesettings();
+		String expected = "Group settings modified";
+		String actual = tc38creategrouppom.alerttext();
+		assertEquals(actual, expected);
+		
+	}
+	
+	
 		
 		
 		@AfterClass
