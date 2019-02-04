@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 import com.elearning.pom.AddCoursePOM;
 import com.elearning.pom.CourseDescPOM;
 import com.elearning.pom.ELoginPOM;
-import com.elearning.pom.ReportSendPOM;
 import com.elearning.pom.TC37ReviewPOM;
+import com.elearning.pom.TC36ReportSendPOM;
 import com.elearning.pom.TC38CreateGroupPOM;
 import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
@@ -29,8 +29,8 @@ public class TC38CreateGroupTest {
 	private ELoginPOM loginPOM;
 	private CourseDescPOM coursedescPOM;
 	private AddCoursePOM addcoursePOM;
-	private ReportSendPOM reportsendpom;
-	private TC37ReviewPOM tc37reviewpom;
+	private TC37ReviewPOM reportsendpom;
+	private TC36ReportSendPOM tc37reviewpom;
 	private TC38CreateGroupPOM tc38creategrouppom;
 	private GenericMethods gen;
 	private static Properties properties;
@@ -55,8 +55,8 @@ public class TC38CreateGroupTest {
 		driver.get(baseUrl);
 		coursedescPOM = new CourseDescPOM(driver);
 		loginPOM = new ELoginPOM(driver);
-		reportsendpom = new ReportSendPOM(driver);
-		tc37reviewpom = new TC37ReviewPOM(driver);
+		reportsendpom = new TC37ReviewPOM(driver);
+		tc37reviewpom = new TC36ReportSendPOM(driver);
 		tc38creategrouppom = new TC38CreateGroupPOM(driver);
 		
 	}
@@ -83,11 +83,12 @@ public class TC38CreateGroupTest {
 		tc38creategrouppom.submitnewgroup();
 		
 			}
-	@Test (priority = 3)
+	@Test (dependsOnMethods= {"CreateNewGroupTest"},priority = 3)
 	public void SelectGroupmemberTest() throws Exception 
 	{
 		
 		tc38creategrouppom.clickaddgroupmember();
+		//two options are getting selected - need to chk why
 		tc38creategrouppom.selectgroupmember("Ashwin karthi (Ashwin111) - ASHWIN111");
 		tc38creategrouppom.addmember();
 		tc38creategrouppom.savesettings();
@@ -96,7 +97,7 @@ public class TC38CreateGroupTest {
 		assertEquals(actual, expected);
 		
 	}
-	@Test (priority = 4)
+	@Test (dependsOnMethods= {"SelectGroupmemberTest"},priority = 4)
 	public void EditGroupTest() throws Exception 
 	{
 		tc38creategrouppom.clickediticon();
