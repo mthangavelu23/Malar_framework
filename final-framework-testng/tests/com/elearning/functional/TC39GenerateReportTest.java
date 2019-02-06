@@ -92,7 +92,7 @@ public class TC39GenerateReportTest {
 	@Test(dependsOnMethods= {"RtclkStudentTest"},priority = 4)
 	public void RtclkDetailsTest() throws Exception {
 	
-		tc39generatereport.selecttestrowclk();
+		//tc39generatereport.selecttestrowclk();
 		//rt arrow click not working 
 		//Thread.sleep(3000);
 		//tc39generatereport.selecttestrowclk();

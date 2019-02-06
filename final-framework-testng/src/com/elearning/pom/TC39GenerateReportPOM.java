@@ -40,7 +40,7 @@ public class TC39GenerateReportPOM {
 	private WebElement rtarrowstudent;
 	
 	//need to improve xpath here
-	@FindBy(xpath = "//img[@title='2rightarrow.png']")
+	@FindBy(xpath = "//img[@title='Details']")
 	private WebElement rtarrowdetailscourse;
 	
 	@FindBy(xpath = "//td[contains(text(),'felenium7test')]")
@@ -92,7 +92,7 @@ public class TC39GenerateReportPOM {
 		//WebElement mainMenu = driver.findElement(By.linkText("menulink"));
 		System.out.println("Doing mouse over on rt arrow of test");
 		//this.rtarrowstudent.click();
-		actions.moveToElement(this.rtarrowdetailscourse).doubleClick().build().perform();
+		actions.moveToElement(this.rtarrowdetailscourse).click().build().perform();
 		}
 	
 	public void quiziconclk()

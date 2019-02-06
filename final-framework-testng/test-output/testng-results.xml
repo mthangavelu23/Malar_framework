@@ -1,59 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="1" ignored="0" total="7" passed="4">
+<testng-results skipped="3" failed="1" ignored="0" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64248" started-at="2019-02-04T13:17:37Z" finished-at="2019-02-04T13:18:41Z">
+  <suite name="Default suite" duration-ms="51971" started-at="2019-02-06T12:44:31Z" finished-at="2019-02-06T12:45:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="64248" started-at="2019-02-04T13:17:37Z" finished-at="2019-02-04T13:18:41Z">
-      <class name="com.elearning.functional.TC39GenerateReportTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="setUpBeforeClass" is-config="true" duration-ms="36" started-at="2019-02-04T13:17:37Z" finished-at="2019-02-04T13:17:37Z">
+    <test name="Default test" duration-ms="51971" started-at="2019-02-06T12:44:31Z" finished-at="2019-02-06T12:45:23Z">
+      <class name="com.elearning.functional.TC37ReviewTest">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.elearning.functional.TC37ReviewTest@42d80b78]" name="setUpBeforeClass" is-config="true" duration-ms="13" started-at="2019-02-06T12:44:31Z" finished-at="2019-02-06T12:44:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="setUp" duration-ms="8229" started-at="2019-02-04T13:17:37Z" finished-at="2019-02-04T13:17:45Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.elearning.functional.TC37ReviewTest@42d80b78]" name="setUp" duration-ms="8546" started-at="2019-02-06T12:44:31Z" finished-at="2019-02-06T12:44:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="loginTest" duration-ms="3339" started-at="2019-02-04T13:17:45Z" finished-at="2019-02-04T13:17:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="ReporttabTest()[pri:2, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="ReporttabTest" duration-ms="4340" started-at="2019-02-04T13:17:48Z" finished-at="2019-02-04T13:17:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReporttabTest -->
-        <test-method status="PASS" signature="RtclkStudentTest()[pri:3, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="RtclkStudentTest" duration-ms="1481" started-at="2019-02-04T13:17:53Z" depends-on-methods="com.elearning.functional.TC39GenerateReportTest.ReporttabTest" finished-at="2019-02-04T13:17:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RtclkStudentTest -->
-        <test-method status="FAIL" signature="RtclkDetailsTest()[pri:4, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="RtclkDetailsTest" duration-ms="44880" started-at="2019-02-04T13:17:54Z" depends-on-methods="com.elearning.functional.TC39GenerateReportTest.RtclkStudentTest" finished-at="2019-02-04T13:18:39Z">
+        <test-method status="FAIL" signature="ReportCorrectTest()[pri:1, instance:com.elearning.functional.TC37ReviewTest@42d80b78]" name="ReportCorrectTest" duration-ms="41533" started-at="2019-02-06T12:44:39Z" finished-at="2019-02-06T12:45:21Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//img[@title='2rightarrow.png']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//img[@title='felenium7test']//ancestor::td//following-sibling::td[@class='hide']//child::img[@alt='2rightarrow.png']"}
   (Session info: chrome=71.0.3578.98)
   (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-EIA7PG3', ip: '9.81.206.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_192'
+System info: host: 'DESKTOP-EIA7PG3', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_192'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61825}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387), userDataDir=C:\Users\MALARV~1\AppData\Local\Temp\scoped_dir18616_6879}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: abb7d33d02be4cd6811bc933d6d48d23
-*** Element info: {Using=xpath, value=//img[@title='2rightarrow.png']}]]>
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54334}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387), userDataDir=C:\Users\MALARV~1\AppData\Local\Temp\scoped_dir14472_946}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f6fa4570abedee26aa0c4c594bb8bd4e
+*** Element info: {Using=xpath, value=//img[@title='felenium7test']//ancestor::td//following-sibling::td[@class='hide']//child::img[@alt='2rightarrow.png']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@title='2rightarrow.png']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@title='felenium7test']//ancestor::td//following-sibling::td[@class='hide']//child::img[@alt='2rightarrow.png']"}
   (Session info: chrome=71.0.3578.98)
   (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-EIA7PG3', ip: '9.81.206.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_192'
+System info: host: 'DESKTOP-EIA7PG3', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_192'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61825}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387), userDataDir=C:\Users\MALARV~1\AppData\Local\Temp\scoped_dir18616_6879}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: abb7d33d02be4cd6811bc933d6d48d23
-*** Element info: {Using=xpath, value=//img[@title='2rightarrow.png']}
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54334}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387), userDataDir=C:\Users\MALARV~1\AppData\Local\Temp\scoped_dir14472_946}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f6fa4570abedee26aa0c4c594bb8bd4e
+*** Element info: {Using=xpath, value=//img[@title='felenium7test']//ancestor::td//following-sibling::td[@class='hide']//child::img[@alt='2rightarrow.png']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -72,13 +60,9 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy9.getCoordinates(Unknown Source)
-at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:65)
-at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:43)
-at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:36)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:641)
-at com.elearning.pom.TC39GenerateReportPOM.rtarrowclkdetails(TC39GenerateReportPOM.java:95)
-at com.elearning.functional.TC39GenerateReportTest.RtclkDetailsTest(TC39GenerateReportTest.java:99)
+at com.sun.proxy.$Proxy9.click(Unknown Source)
+at com.elearning.pom.TC37ReviewPOM.rtarrowclk(TC37ReviewPOM.java:74)
+at com.elearning.functional.TC37ReviewTest.ReportCorrectTest(TC37ReviewTest.java:70)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,14 +93,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RtclkDetailsTest -->
-        <test-method status="SKIP" signature="SendEmailTest()[pri:5, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="SendEmailTest" duration-ms="0" started-at="2019-02-04T13:18:39Z" depends-on-methods="com.elearning.functional.TC39GenerateReportTest.RtclkDetailsTest" finished-at="2019-02-04T13:18:39Z">
+        </test-method> <!-- ReportCorrectTest -->
+        <test-method status="SKIP" signature="SendEmailTest()[pri:2, instance:com.elearning.functional.TC37ReviewTest@42d80b78]" name="SendEmailTest" duration-ms="0" started-at="2019-02-06T12:45:21Z" depends-on-methods="com.elearning.functional.TC37ReviewTest.ReportCorrectTest" finished-at="2019-02-06T12:45:21Z">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method TC39GenerateReportTest.SendEmailTest()[pri:5, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78] depends on not successfully finished methods]]>
+              <![CDATA[Method TC37ReviewTest.SendEmailTest()[pri:2, instance:com.elearning.functional.TC37ReviewTest@42d80b78] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TC39GenerateReportTest.SendEmailTest()[pri:5, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78] depends on not successfully finished methods
+              <![CDATA[java.lang.Throwable: Method TC37ReviewTest.SendEmailTest()[pri:2, instance:com.elearning.functional.TC37ReviewTest@42d80b78] depends on not successfully finished methods
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -141,13 +125,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SendEmailTest -->
-        <test-method status="SKIP" signature="AssertTest()[pri:6, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="AssertTest" duration-ms="0" started-at="2019-02-04T13:18:39Z" depends-on-methods="com.elearning.functional.TC39GenerateReportTest.SendEmailTest" finished-at="2019-02-04T13:18:39Z">
+        <test-method status="SKIP" signature="AssertTest()[pri:3, instance:com.elearning.functional.TC37ReviewTest@42d80b78]" name="AssertTest" duration-ms="0" started-at="2019-02-06T12:45:21Z" depends-on-methods="com.elearning.functional.TC37ReviewTest.SendEmailTest" finished-at="2019-02-06T12:45:21Z">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method TC39GenerateReportTest.AssertTest()[pri:6, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78] depends on not successfully finished methods]]>
+              <![CDATA[Method TC37ReviewTest.AssertTest()[pri:3, instance:com.elearning.functional.TC37ReviewTest@42d80b78] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TC39GenerateReportTest.AssertTest()[pri:6, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78] depends on not successfully finished methods
+              <![CDATA[java.lang.Throwable: Method TC37ReviewTest.AssertTest()[pri:3, instance:com.elearning.functional.TC37ReviewTest@42d80b78] depends on not successfully finished methods
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -172,11 +156,42 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssertTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.elearning.functional.TC39GenerateReportTest@42d80b78]" name="tearDown" is-config="true" duration-ms="1839" started-at="2019-02-04T13:18:39Z" finished-at="2019-02-04T13:18:41Z">
+        <test-method status="SKIP" signature="courseclk()[pri:4, instance:com.elearning.functional.TC37ReviewTest@42d80b78]" name="courseclk" duration-ms="0" started-at="2019-02-06T12:45:21Z" depends-on-methods="com.elearning.functional.TC37ReviewTest.AssertTest" finished-at="2019-02-06T12:45:21Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TC37ReviewTest.courseclk()[pri:4, instance:com.elearning.functional.TC37ReviewTest@42d80b78] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TC37ReviewTest.courseclk()[pri:4, instance:com.elearning.functional.TC37ReviewTest@42d80b78] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- courseclk -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.elearning.functional.TC37ReviewTest@42d80b78]" name="tearDown" is-config="true" duration-ms="1839" started-at="2019-02-06T12:45:21Z" finished-at="2019-02-06T12:45:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.elearning.functional.TC39GenerateReportTest -->
+      </class> <!-- com.elearning.functional.TC37ReviewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

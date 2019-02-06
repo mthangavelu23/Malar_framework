@@ -3,17 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.elearning.functional.TC39GenerateReportTest">
+      <class name="com.elearning.functional.TC37ReviewTest">
         <methods>
-          <include name="RtclkDetailsTest"/>
-          <include name="SendEmailTest"/>
-          <include name="AssertTest"/>
+          <include name="ReportCorrectTest"/>
           <include name="setUpBeforeClass"/>
-          <include name="ReporttabTest"/>
-          <include name="RtclkStudentTest"/>
+          <include name="courseclk"/>
+          <include name="AssertTest"/>
+          <include name="SendEmailTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.elearning.functional.TC39GenerateReportTest -->
+      </class> <!-- com.elearning.functional.TC37ReviewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
