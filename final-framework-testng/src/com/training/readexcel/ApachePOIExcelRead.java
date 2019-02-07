@@ -35,6 +35,7 @@ public class ApachePOIExcelRead {
 			
 			int rowTotal = sheet.getLastRowNum();
 
+			System.out.println("total rows "+rowTotal);
 			if ((rowTotal > 0) || (sheet.getPhysicalNumberOfRows() > 0)) {
 			    rowTotal++;
 			}
@@ -89,8 +90,10 @@ public class ApachePOIExcelRead {
 	}
 
 	public static void main(String[] args) {
-		String fileName = "C:/Malar/selenium/Elearning/TestDataElearning.xlsx";
+		String fileName = "C:\\Malar\\selenium\\Elearning\\TestDataElearning2.xlsx";
 		
+		//C:\\Users\\MalarviliThangavelu\\Desktop\\TestDataElearning.xlsx
+		//C:\Malar\selenium\Elearning
 		for(String [] temp : new ApachePOIExcelRead().getExcelContent(fileName)){
 			for(String  tt : temp){
 				System.out.println(tt);
