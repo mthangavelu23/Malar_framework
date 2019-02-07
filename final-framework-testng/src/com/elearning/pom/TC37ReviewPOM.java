@@ -31,7 +31,7 @@ public class TC37ReviewPOM {
 	//@FindBy(xpath = "//img[@title='2rightarrow.png']")
 	@FindBy(xpath = "//img[@title='felenium7test']//ancestor::td//following-sibling::td[@class='hide']//child::img[@alt='2rightarrow.png']")
 	private WebElement rtarrowicon;
-	
+	//a[@href='../mySpace/myStudents.php?student=17&details=true&course=FELE7&origin=tracking_course&id_session=0']//img[@title='2rightarrow.png']
 	//img[@title='felenium7test']//ancestor::td//following-sibling::td[@class='td_actions']//child::img[@alt='2rightarrow.png']
 	@FindBy(xpath = "//img[@title='quiz.png']")
 	private WebElement quizicon;
