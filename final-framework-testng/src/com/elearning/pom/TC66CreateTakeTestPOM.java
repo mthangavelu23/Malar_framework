@@ -30,7 +30,10 @@ public class TC66CreateTakeTestPOM {
 
 	@FindBy(xpath = "//button[@id='advanced_params']")
 	private WebElement advanceds;
+	@FindBy(xpath = "//div[@id='cke_1_contents']//child::iframe[@class='cke_wysiwyg_frame cke_reset']")
+	private WebElement inframetestcontext;
 
+	
 	@FindBy(xpath = "//input[@id='exerciseType_0']")
 	private WebElement feedbackrb;
 
@@ -45,46 +48,44 @@ public class TC66CreateTakeTestPOM {
 	private WebElement timeselectmonth;
 
 	@FindBy(xpath = "//select[@class='ui-datepicker-year']")
-	private WebElement newtask;
-	@FindBy(xpath = "//input[@name='title']")
-	private WebElement newtasktitle;
-	@FindBy(xpath = "//button[@id='add_post_save']")
-	private WebElement newtasksave;
-	@FindBy(xpath = "//img[@title='Roles management']")
-	private WebElement rolemgmticon;
-	@FindBy(xpath = "//img[@title='Add a new role']")
-	private WebElement addnewrole;
-	@FindBy(xpath = "//input[@name='task_name']")
-	private WebElement newroletitle;
-	@FindBy(xpath = "//button[@name='Submit']")
-	private WebElement newrolesave;
-	@FindBy(xpath = "//img[@title='Assign roles']")
-	private WebElement assignroleicon;
-	@FindBy(xpath = "//div[@class='dropdown-menu open']//following-sibling::select[@name='task_user_id']")
-	private WebElement userlistbox;
-	@FindBy(xpath = "//div[@class='bs-searchbox']//child::input[@xpath='1']")
-	private WebElement userlistboxenter;
+	private WebElement timeselectyear;
 	
-	@FindBy(xpath = "//div[@class='dropdown-menu open']//following-sibling::select[@name='task_task_id']")
-	private WebElement tasklistbox;
+	//select day - how to select uniquely for single digit
+	@FindBy(xpath = "//td[@data-handler='selectDay']//a[@class='ui-state-default'][contains(text(),'19')]")
+	private WebElement dayselect;
 	
-	@FindBy(xpath = "//div[@class='bs-searchbox']//child::input[@xpath='1']")
-	private WebElement tasklistboxenter;
+	@FindBy(xpath = "//input[@name='pass_percentage']")
+	private WebElement passpercent;
+	@FindBy(xpath = "//button[@name='submitExercise']")
+	private WebElement proceedquestion;
+	@FindBy(xpath = "//img[@title='Multiple choice']")
+	private WebElement multiplechoiceicon;
+	@FindBy(xpath = "//input[@name='questionName']")
+	private WebElement questionname;
+	@FindBy(xpath = "//div[@id='cke_2_contents']//child::iframe[@class='cke_wysiwyg_frame cke_reset']")
+	private WebElement qfirstchoice;
+	//do second . thrid and fourth choice after wroking on first choice
+	@FindBy(xpath = "//input[@id='qf_8d9eff']")
+	private WebElement firstchoiceradio;
+	@FindBy(xpath = "//button[@id='submit-question']")
+	private WebElement addquestion;
+	//1 questions, for a total score (all questions) of 0(Expected)- alert info
+	@FindBy(xpath = "//input[@id='qf_c1024e']")
+	private WebElement secondchoiceradio;
 	
+	@FindBy(xpath = "//img[@title='Preview']")
+	private WebElement previewicon;
 	
-	@FindBy(xpath = "//button[@id='assign_task_submit']")
-	private WebElement validate;
-	@FindBy(xpath = "//img[@title='Users rights management']")
-	private WebElement userrightmgmticon;
-	@FindBy(xpath = "//img[@title='Users management']")
-	private WebElement usermgmticon;
-	@FindBy(xpath = "//input[@value='21']")
-	private WebElement userchkbox;
-	@FindBy(xpath = "//a[contains(@class,'btn btn-primary')][contains(text(),'Register')][contains(@href,'21')]")
-	private WebElement userregister;
-	//tr[@class='row_odd']
-	private Object newxpath;
 
+	@FindBy(xpath = "//a[@class='btn btn-success btn-large']")
+	private WebElement Starttestbutton;
+	@FindBy(xpath = "//a[@class='dropdown-toggle']")
+	private WebElement Logouticon;
+	
+	@FindBy(xpath = "//a[@title='Logout']")
+	private WebElement Logoutbutton;
+	
+	
 	public void clickprojecticon() {
 		this.projecticon.click();
 
