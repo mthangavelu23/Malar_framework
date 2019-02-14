@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.elearning.functional.TC69AddUserNegativeTest">
+      <class name="com.elearning.functional.TC66CreateTakeTestTest">
         <methods>
-          <include name="addNewUserTest" invocation-numbers="0 1 2 3"/>
           <include name="setUpBeforeClass"/>
+          <include name="addsecondQuestionTest"/>
+          <include name="addQuestionTest"/>
           <include name="tearDown"/>
+          <include name="createNewTest"/>
         </methods>
-      </class> <!-- com.elearning.functional.TC69AddUserNegativeTest -->
+      </class> <!-- com.elearning.functional.TC66CreateTakeTestTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -28,17 +28,16 @@ public class TC66CreateTakeTestPOM {
 	@FindBy(xpath = "//input[@name='exerciseTitle']")
 	private WebElement entertesttitle;
 
-	@FindBy(xpath = "//button[@id='advanced_params']")
-	private WebElement advanceds;
-	@FindBy(xpath = "//div[@id='cke_1_contents']//child::iframe[@class='cke_wysiwyg_frame cke_reset']")
-	private WebElement inframetestcontext;
+	//@FindBy(xpath = "//button[@id='advanced_params']")
+	//private WebElement advanceds;
+	//@FindBy(xpath = "//div[@id='cke_1_contents']//child::iframe[@class='cke_wysiwyg_frame cke_reset']")
+	//rivate WebElement inframetestcontext;
 
-	
 	@FindBy(xpath = "//input[@id='exerciseType_0']")
 	private WebElement feedbackrb;
 
 	// chk how to click on specific group member icon( handling href )
-	@FindBy(xpath = "//input[@id='qf_048dda']")
+	@FindBy(xpath = "//input[@name='activate_start_date_check']")
 	private WebElement enablesttimecb;
 
 	@FindBy(xpath = "//img[@class='ui-datepicker-trigger']//preceding-sibling::input[@id='start_time']")
@@ -49,11 +48,11 @@ public class TC66CreateTakeTestPOM {
 
 	@FindBy(xpath = "//select[@class='ui-datepicker-year']")
 	private WebElement timeselectyear;
-	
-	//select day - how to select uniquely for single digit
+
+	// select day - how to select uniquely for single digit
 	@FindBy(xpath = "//td[@data-handler='selectDay']//a[@class='ui-state-default'][contains(text(),'19')]")
 	private WebElement dayselect;
-	
+
 	@FindBy(xpath = "//input[@name='pass_percentage']")
 	private WebElement passpercent;
 	@FindBy(xpath = "//button[@name='submitExercise']")
@@ -62,158 +61,227 @@ public class TC66CreateTakeTestPOM {
 	private WebElement multiplechoiceicon;
 	@FindBy(xpath = "//input[@name='questionName']")
 	private WebElement questionname;
-	@FindBy(xpath = "//div[@id='cke_2_contents']//child::iframe[@class='cke_wysiwyg_frame cke_reset']")
+	//@FindBy(xpath = "//div[@id='cke_2_contents']//child::iframe[@class='cke_wysiwyg_frame cke_reset']")
+	@FindBy(xpath = "//iframe[@aria-describedby='cke_111']")
 	private WebElement qfirstchoice;
-	//do second . thrid and fourth choice after wroking on first choice
-	@FindBy(xpath = "//input[@id='qf_8d9eff']")
+	
+	// do second . thrid and fourth choice after wroking on first choice
+	@FindBy(xpath = "//input[@class='checkbox'][@value='1']")
 	private WebElement firstchoiceradio;
 	@FindBy(xpath = "//button[@id='submit-question']")
 	private WebElement addquestion;
-	//1 questions, for a total score (all questions) of 0(Expected)- alert info
-	@FindBy(xpath = "//input[@id='qf_c1024e']")
+	// 1 questions, for a total score (all questions) of 0(Expected)- alert info
+	@FindBy(xpath = "//input[@class='checkbox'][@value='2']")
 	private WebElement secondchoiceradio;
-	
+
 	@FindBy(xpath = "//img[@title='Preview']")
 	private WebElement previewicon;
-	
 
 	@FindBy(xpath = "//a[@class='btn btn-success btn-large']")
 	private WebElement Starttestbutton;
 	@FindBy(xpath = "//a[@class='dropdown-toggle']")
 	private WebElement Logouticon;
-	
 	@FindBy(xpath = "//a[@title='Logout']")
-	private WebElement Logoutbutton;
+	private WebElement Logoutlnk;
+
+	@FindBy(xpath = "//a[contains(text(),'Course catalog')]")
+	private WebElement coursecat;
+	@FindBy(xpath = "//input[@name='search_term']")
+	private WebElement searchcourse;
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement searchbutton;
+	@FindBy(xpath = "//select[@name='category_code']")
+	private WebElement coursecategorylist;
+
+	@FindBy(xpath = "//a[@title='Subscribe']")
+	private WebElement coursesubscribe;
+	@FindBy(xpath = "//a[@title='My courses']")
+	private WebElement hmpgcourselnk;
+	@FindBy(xpath = "//a[contains(text(),'SeleniumCourse5')]")
+	private WebElement mycourselink;
+	@FindBy(xpath = "//tbody//tr[@id='exercise_list_66']")
+	private WebElement testlink;
+
+	@FindBy(xpath = "//div[@class='question_options']//child::input[@name='choice[73]']")
+	private WebElement firstchoice;
+	@FindBy(xpath = "//button[@name='save_now']")
+	private WebElement nextquestion;
+	@FindBy(xpath = "//input[@id='choice-74-2']")
+	private WebElement secondchoice;
+	@FindBy(xpath = "//button[@name='save_now']")
+	private WebElement endtest;
+	@FindBy(xpath = "//a[@class='btn btn-primary']")
+	private WebElement returnhomepagebtn;
+
+	@FindBy(xpath = "//img[@title='Results and feedback']//parent::a[contains(@href,'SELENIUMCOURSE5')]")
+	private WebElement cresultsfeedback;
 	
+	@FindBy(xpath = "//img[@title='Grade activity']//parent::a[contains(@href,'SELENIUMCOURSE5')]")
+	private WebElement cgradeactivity;
+
+	public void createnewtest() {
+		this.createnewtesticon.click();
+
+	}
+
+	public void testname(String test) {
+		this.entertesttitle.clear();
+		this.entertesttitle.sendKeys(test);
+	}
+
+	public void atendoftest() {
+		
+		this.feedbackrb.click();
+	}
+
+	public void enabletest() {
+		this.enablesttimecb.click();
+	}
+	public void timeiconclk() {
+		this.timeicon.click();
+	}
+
+//select time credentials
+	public void selectmonth(String month) {
+		// this.userlistbox.click();
+		System.out.println("Selecting month");
+		Select sel = new Select(this.timeselectmonth);
+		sel.selectByVisibleText(month);
+		
+
+	}
+
+	public void selectyear(String year) {
+		// this.userlistbox.click();
+		System.out.println("Selecting year");
+		Select sel = new Select(this.timeselectyear);
+		sel.selectByVisibleText(year);
+
+	}
+
+	public void passpercent(String passpercent) {
+		this.passpercent.clear();
+		this.passpercent.sendKeys(passpercent);
+	}
+
+	public void proceedquestions() {
+		this.proceedquestion.click();
+
+	}
+
+	public void multiplechoiceiconclk() {
+		this.multiplechoiceicon.click();
+
+	}
+
+	public void enterquestion(String question) {
+		this.questionname.clear();
+		this.questionname.sendKeys(question);
+	}
+
+//need to add all 3 choices question 
+	public void setfocus(String valuetobody)
+	{
+		driver.switchTo().frame(qfirstchoice);
+		WebElement body=driver.switchTo().activeElement();
+		body.sendKeys(valuetobody);
+		driver.switchTo().defaultContent();
+		
+		
+	}
+	public void firstchoicetxt(String firstchoice) {
+		//this.se.clear();
+		this.qfirstchoice.sendKeys(firstchoice);
+	}
+
+	// first option radio button
+	public void firstchoicerbclk() {
+		this.firstchoiceradio.click();
+
+	}
+
+	public void addquestionclk() {
+		this.addquestion.click();
+
+	}
+
+	public void secondchoicerbclk() {
+		this.secondchoiceradio.click();
+
+	}
+
+	public void previewclk() {
+		this.previewicon.click();
+
+	}
+
+	public void coursecatclk() {
+		this.coursecat.click();
+
+	}
 	
-	public void clickprojecticon() {
-		this.projecticon.click();
+	public void logouticon() {
+		this.Logouticon.click();
 
-	}
-
-	public void createnewproject() {
-		this.createnewproject.click();
-
-	}
-
-	public void addtitleblog(String i) {
-		this.addtitle.clear();
-		this.addtitle.sendKeys(i);
-	}
-
-	public void addsubtitleblog(String i) {
-		this.addsubtitle.sendKeys(Keys.TAB);
-		//this.addsubtitle.clear();
-		this.addsubtitle.sendKeys(i);
-	}
-
-	public void saveblog() {
-		this.saveblog.click();
-
-	}
-
-	public void projectlnkclik1(String projectnametxt) {
-		String firstxpath = "//a[contains(text(),'";
-		String lastxpath = "')]";
-		String actualxpath = firstxpath + projectnametxt + lastxpath;
-		String actualxpath1 = actualxpath.toString();
-		System.out.println(actualxpath1);
-		WebElement newxpath = driver.findElement(By.linkText(actualxpath1));
-		this.projectlink.click();
-		//((WebElement) this.newxpath).click();
 	}
 	
-	public void projectlnkclik() {
-		this.projectlink.click();
-		
-	}
-
-
-	public void newtask() {
-		this.newtask.click();
-	}
-
-	public void addnewtasktitle(String i) {
-		this.newtasktitle.clear();
-		this.newtasktitle.sendKeys(i);
-	}
-
-	public void savenewtasktitle() {
-		this.newtasksave.click();
+	public void logoutlnk() {
+		this.Logoutlnk.click();
 
 	}
 
-	public void rolemgmticon() {
-		this.rolemgmticon.click();
+	public void searchcourse(String course) {
+		this.searchcourse.clear();
+		this.searchcourse.sendKeys(course);
 
 	}
 
-	public void addnewrole() {
-
-		this.addnewrole.click();
+	public void searchclk() {
+		this.searchbutton.click();
 	}
 
-	public void enternewrole(String i) {
-		this.newroletitle.clear();
-		this.newroletitle.sendKeys(i);
-	}
-
-	public void savenewrole() {
-
-		this.newrolesave.click();
-	}
-
-	public void assignroleicon() {
-		this.assignroleicon.click();
-	}
-
-	public void selectuser(String usermem) {
-		//this.userlistbox.click();
-		System.out.println("Selecting value user");
-		Select sel = new Select(this.userlistbox);
-		sel.selectByVisibleText(usermem);
-		//this.userlistbox.sendKeys(Keys.TAB);
-		
-	}
-	public void enteruser(String usermem) {
-		this.userlistboxenter.sendKeys(usermem);
-		this.userlistboxenter.sendKeys(Keys.ENTER);
-		
-	}
-	
-	public void entertask(String taskname) {
-		this.tasklistboxenter.sendKeys(taskname);
-		this.tasklistboxenter.sendKeys(Keys.ENTER);
-		
-	}
-		
-	public void selecttask(String task) {
-		System.out.println("Selecting task");
-		System.out.println("Selecting value user");
-		Select sel = new Select(this.tasklistbox);
-		sel.selectByVisibleText(task);
-		//this.tasklistbox.click();
-		//Select sel = new Select(this.tasklistbox);
-		//sel.selectByVisibleText(task);
+	public void selectcoursecat(String coursecat) {
+		// this.userlistbox.click();
+		System.out.println("Selecting coursecat");
+		Select sel = new Select(this.coursecategorylist);
+		sel.selectByVisibleText(coursecat);
 
 	}
 
-	public void validateduserrole() {
-		this.validate.click();
+	public void subscribecourse(String i) {
+		this.coursesubscribe.click();
 	}
 
-	public void usermgmticon() {
-		this.usermgmticon.click();
+	public void hmpgcourselink() {
+
+		this.hmpgcourselnk.click();
+	}
+
+	public void mycourselink() {
+		this.mycourselink.click();
 
 	}
 
-	public void userchkbox() {
-		this.userchkbox.click();
+	public void testlnkclk() {
 
+		this.testlink.click();
 	}
 
-	public void clkregister() {
-		this.userregister.click();
+	public void Starttestclk() {
+
+		this.Starttestbutton.click();
+	}
+
+	public void answerchoiceclk() {
+		this.firstchoice.click();
+	}
+
+	public void resultsfeedbackclk() {
+		this.cresultsfeedback.click();
+	}
+
+	public void gradeactivity() {
+		this.cgradeactivity.click();
 
 	}
 

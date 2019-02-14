@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -19,6 +20,7 @@ import com.elearning.pom.TC36ReportSendPOM;
 import com.elearning.pom.TC38CreateGroupPOM;
 import com.elearning.pom.TC39GenerateReportPOM;
 import com.elearning.pom.TC40CreateProjectPOM;
+import com.elearning.pom.TC66CreateTakeTestPOM;
 import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
 import com.training.utility.DriverFactory;
@@ -39,6 +41,7 @@ public class TC66CreateTakeTestTest {
 	private TC39GenerateReportPOM tc39generatereport;
 	private TC38CreateGroupPOM tc38creategroup;
 	private TC40CreateProjectPOM tc40createprojectpom;
+	private TC66CreateTakeTestPOM tc66createtaketestpom;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -58,13 +61,14 @@ public class TC66CreateTakeTestTest {
 		driver.get(baseUrl);
 		// declare objects of POM classes
 		coursedescPOM = new CourseDescPOM(driver);
+		addcoursePOM = new AddCoursePOM(driver);
 		loginPOM = new ELoginPOM(driver);
 		reviewpom = new TC37ReviewPOM(driver);
 		tc36reportsendpom = new TC36ReportSendPOM(driver);
 		tc38creategroup = new TC38CreateGroupPOM(driver);
 		tc39generatereport = new TC39GenerateReportPOM(driver);
 		tc40createprojectpom = new TC40CreateProjectPOM(driver);
-
+		tc66createtaketestpom = new TC66CreateTakeTestPOM(driver);
 	}
 
 	@Test(priority = 1)
@@ -76,68 +80,96 @@ public class TC66CreateTakeTestTest {
 	}
 
 	@Test(priority = 2)
-	public void createNewProjectTest() throws Exception {
-		coursedescPOM.mycoursetab();
-		tc36reportsendpom.homepgcourseclk();
-		tc40createprojectpom.clickprojecticon();
-		tc40createprojectpom.createnewproject();
-		tc40createprojectpom.addtitleblog("Selenium3");
-		tc40createprojectpom.addsubtitleblog("Selenium11");
-		tc40createprojectpom.saveblog();
-		//tc40createprojectpom.projectlnkclik("Selenium3");
-		tc40createprojectpom.projectlnkclik();
+	public void createNewTest() throws Exception {
+		addcoursePOM.clickCourselink();
+		addcoursePOM.sendcourse("1Selenium9");
+		addcoursePOM.clickcoursesubmit();
+		//coursedescPOM.mycoursetab();
+		//tc36reportsendpom.homepgcourseclk();
+		tc36reportsendpom.testiconclk();
+		tc66createtaketestpom.createnewtest();
+		tc66createtaketestpom.testname("1em");
+		addcoursePOM.advanceds();
+		addcoursePOM.setfocus("This is new Selenium Test6");
+		tc66createtaketestpom.atendoftest();
+		tc66createtaketestpom.enabletest();
+		//WebDriver wait = new WebDriver()
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//tc66createtaketestpom.timeiconclk();
+		//tc66createtaketestpom.selectmonth("Feb");
+		//tc66createtaketestpom.selectyear("2019");
+		// choose select day
+		tc66createtaketestpom.passpercent("60");
+		tc66createtaketestpom.proceedquestions();
 
 	}
 
-	@Test(dependsOnMethods = { "createNewProjectTest" }, priority = 3)
-	public void createNewTaskTest() throws Exception {
-
-		tc40createprojectpom.newtask();
-		tc40createprojectpom.addnewtasktitle("NewTask5");
-		tc40createprojectpom.savenewtasktitle();
-
+	@Test(priority = 3, dependsOnMethods = { "createNewTest" }, enabled = true)
+	public void addQuestionTest() throws Exception {
+		tc66createtaketestpom.multiplechoiceiconclk();
+		tc66createtaketestpom.enterquestion("What is TestNG?");
+		tc66createtaketestpom.setfocus("Open Source framework");
+		// include to enter all 3 choices
+		tc66createtaketestpom.firstchoicerbclk();
+		tc66createtaketestpom.addquestionclk();
+		tc66createtaketestpom.multiplechoiceiconclk();
+		tc66createtaketestpom.enterquestion("What are the Selenium IDE");
+		tc66createtaketestpom.setfocus("Webdriver Webdriver IDE");
+		// include to enter all 3 choices
+		tc66createtaketestpom.secondchoicerbclk();
+		tc66createtaketestpom.addquestionclk();
+		//insert assertion
+		tc66createtaketestpom.previewclk();
 	}
 
-	@Test(dependsOnMethods = { "createNewTaskTest" }, priority = 4)
-	public void createNewRoleTest() throws Exception {
-
-		tc40createprojectpom.rolemgmticon();
-		tc40createprojectpom.addnewrole();
-		tc40createprojectpom.enternewrole("QA Consultant");
-		tc40createprojectpom.savenewrole();
-
+	@Test(priority = 4, dependsOnMethods = { "addQuestionTest" }, enabled = true)
+	public void addsecondQuestionTest() throws Exception {
+		tc66createtaketestpom.multiplechoiceiconclk();
+		tc66createtaketestpom.enterquestion("What is TestNG?");
+		tc66createtaketestpom.setfocus("Open Source framework");
+		// include to enter all 3 choices
+		tc66createtaketestpom.firstchoicerbclk();
+		tc66createtaketestpom.addquestionclk();
+		tc66createtaketestpom.multiplechoiceiconclk();
+		tc66createtaketestpom.enterquestion("What are the Selenium IDE");
+		tc66createtaketestpom.setfocus("Webdriver Webdriver IDE");
+		// include to enter all 3 choices
+		tc66createtaketestpom.secondchoicerbclk();
+		tc66createtaketestpom.addquestionclk();
+		tc66createtaketestpom.previewclk();
+		//insert assertion - TO SEE IF start button dsplayed
 	}
 
-	@Test(dependsOnMethods = { "createNewRoleTest" }, priority = 5)
-	public void assignNewRoleTest() throws Exception {
-
-		tc40createprojectpom.assignroleicon();
-		tc40createprojectpom.selectuser("Abishek karthi");
-		//tc40createprojectpom.enteruser("Ashwin karthi");
-		tc40createprojectpom.selecttask("Project manager");
-		//tc40createprojectpom.entertask("QA Consultant");
-		tc40createprojectpom.validateduserrole();
-
+	@Test(priority = 5, dependsOnMethods = { "addQuestionTest" }, enabled = true)
+	public void logoutTest() throws Exception {
+	
+		tc66createtaketestpom.logouticon();
+		tc66createtaketestpom.logoutlnk();
+	
 	}
-
-	@Test(dependsOnMethods = { "assignNewRoleTest" }, priority = 6)
-	public void registerProjectUserTest() throws Exception {
-
-		tc40createprojectpom.usermgmticon();
-		tc40createprojectpom.userchkbox();
-		tc40createprojectpom.clkregister();
-
+	@Test(priority = 6, dependsOnMethods = { "logoutTest" }, enabled = true)	
+	public void studentloginTest() throws Exception {
+		loginPOM.sendUserName("Ashwin111");
+		loginPOM.sendPassword("ashwin111");
+		loginPOM.clickLoginBtn();
 	}
-
-	@Test(dependsOnMethods = { "registerProjectUserTest" }, priority = 7)
-	public void AssertUserregisterTest() throws Exception {
-
-		String expected = "The user has been registered";
-		String actual = tc38creategroup.alerttext();
-		assertEquals(actual, expected);
-
+	
+	@Test(priority = 7, dependsOnMethods = { "addQuestionTest" }, enabled = true)
+	public void studentsubscribecourseTest() throws Exception {
+		tc66createtaketestpom.coursecatclk();
+		tc66createtaketestpom.searchcourse("1Selenium9");
+		tc66createtaketestpom.searchclk();
+		tc66createtaketestpom.subscribecourse("1Selenium9");
+		
 	}
-
+	@Test(priority = 8, dependsOnMethods = { "studentsubscribecourseTest" }, enabled = true)
+	public void studenttaketestTest() throws Exception {
+		tc66createtaketestpom.
+		tc66createtaketestpom.searchcourse("1Selenium9");
+		tc66createtaketestpom.searchclk();
+		tc66createtaketestpom.subscribecourse("1Selenium9");
+		
+	}
 	@AfterClass
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
