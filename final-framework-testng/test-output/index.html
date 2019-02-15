@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\MalarviliThangavelu\AppData\Local\Temp\testng-eclipse--1839432737\testng-customsuite.xml</span>
+                    <span>C:\Users\MalarviliThangavelu\AppData\Local\Temp\testng-eclipse--213615061\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                    <span class="method-stats">12 methods, 2 failed,  3 skipped,  7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,7 +105,36 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="addsecondQuestionTest">addsecondQuestionTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="studenttaketestTest">studenttaketestTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Default_suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="studentlogouttest">studentlogouttest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="teacherevaluatetest">teacherevaluatetest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="teacherlogintest">teacherlogintest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -141,12 +170,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="studentTest">studentTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="studentloginTest">studentloginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="studentloginTest">studentloginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.elearning.functional.TC66CreateTakeTestTest" hash-for-method="studentsubscribecourseTest">studentsubscribecourseTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -173,15 +202,15 @@
                   </a> <!-- addsecondQuestionTest -->
                   <span class="method-name">addsecondQuestionTest</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@title=&apos;Multiple choice&apos;]&quot;}
-  (Session info: chrome=71.0.3578.98)
+  (Session info: chrome=72.0.3626.109)
   (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
-System info: host: &apos;DESKTOP-EIA7PG3&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_192&apos;
+System info: host: &apos;DESKTOP-EIA7PG3&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_192&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:20093}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387), userDataDir=C:\Users\MALARV~1\AppData\Local\Temp\scoped_dir10320_13221}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c6b9fcde8cc46f633b0aeaeed51d3971
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:3342}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387), userDataDir=C:\Users\MALARV~1\AppData\Local\Temp\scoped_dir3596_24446}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.109, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ea1746cfb221c4c88a5f0d87622a19c
 *** Element info: {Using=xpath, value=//img[@title=&apos;Multiple choice&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -202,8 +231,74 @@ Session ID: c6b9fcde8cc46f633b0aeaeed51d3971
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at com.elearning.pom.TC66CreateTakeTestPOM.multiplechoiceiconclk(TC66CreateTakeTestPOM.java:173)
+	at com.elearning.pom.TC66CreateTakeTestPOM.multiplechoiceiconclk(TC66CreateTakeTestPOM.java:178)
 	at com.elearning.functional.TC66CreateTakeTestTest.addsecondQuestionTest(TC66CreateTakeTestTest.java:127)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="studenttaketestTest">
+                  </a> <!-- studenttaketestTest -->
+                  <span class="method-name">studenttaketestTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@title=&apos;1Selenium14&apos;]&quot;}
+  (Session info: chrome=72.0.3626.109)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;DESKTOP-EIA7PG3&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_192&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:3342}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387), userDataDir=C:\Users\MALARV~1\AppData\Local\Temp\scoped_dir3596_24446}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.109, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ea1746cfb221c4c88a5f0d87622a19c
+*** Element info: {Using=xpath, value=//a[@title=&apos;1Selenium14&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.elearning.pom.TC66CreateTakeTestPOM.specificcourseclk(TC66CreateTakeTestPOM.java:271)
+	at com.elearning.functional.TC66CreateTakeTestTest.studenttaketestTest(TC66CreateTakeTestTest.java:170)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -235,6 +330,98 @@ Session ID: c6b9fcde8cc46f633b0aeaeed51d3971
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.elearning.functional.TC66CreateTakeTestTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="studentlogouttest">
+                  </a> <!-- studentlogouttest -->
+                  <span class="method-name">studentlogouttest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TC66CreateTakeTestTest.studentlogouttest()[pri:9, instance:com.elearning.functional.TC66CreateTakeTestTest@3bfdc050] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="teacherevaluatetest">
+                  </a> <!-- teacherevaluatetest -->
+                  <span class="method-name">teacherevaluatetest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TC66CreateTakeTestTest.teacherevaluatetest()[pri:11, instance:com.elearning.functional.TC66CreateTakeTestTest@3bfdc050] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="teacherlogintest">
+                  </a> <!-- teacherlogintest -->
+                  <span class="method-name">teacherlogintest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TC66CreateTakeTestTest.teacherlogintest()[pri:10, instance:com.elearning.functional.TC66CreateTakeTestTest@3bfdc050] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-skipped -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -278,16 +465,16 @@ Session ID: c6b9fcde8cc46f633b0aeaeed51d3971
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="studentTest">
-                  </a> <!-- studentTest -->
-                  <span class="method-name">studentTest</span>
+                  <a name="studentloginTest">
+                  </a> <!-- studentloginTest -->
+                  <span class="method-name">studentloginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="studentloginTest">
-                  </a> <!-- studentloginTest -->
-                  <span class="method-name">studentloginTest</span>
+                  <a name="studentsubscribecourseTest">
+                  </a> <!-- studentsubscribecourseTest -->
+                  <span class="method-name">studentsubscribecourseTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -295,7 +482,7 @@ Session ID: c6b9fcde8cc46f633b0aeaeed51d3971
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\MalarviliThangavelu\AppData\Local\Temp\testng-eclipse--1839432737\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\MalarviliThangavelu\AppData\Local\Temp\testng-eclipse--213615061\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -344,44 +531,60 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addsecondQuestionTest')
+data.setCell(0, 1, 'studenttaketestTest')
 data.setCell(0, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
-data.setCell(0, 3, 60094);
+data.setCell(0, 3, 61751);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createNewTest')
+data.setCell(1, 1, 'addsecondQuestionTest')
 data.setCell(1, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
-data.setCell(1, 3, 24173);
+data.setCell(1, 3, 60062);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addQuestionTest')
+data.setCell(2, 1, 'createNewTest')
 data.setCell(2, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
-data.setCell(2, 3, 20587);
+data.setCell(2, 3, 30040);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginTest')
+data.setCell(3, 1, 'addQuestionTest')
 data.setCell(3, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
-data.setCell(3, 3, 9628);
+data.setCell(3, 3, 24789);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'setUp')
 data.setCell(4, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
-data.setCell(4, 3, 9577);
+data.setCell(4, 3, 10410);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'studentTest')
+data.setCell(5, 1, 'loginTest')
 data.setCell(5, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
-data.setCell(5, 3, 4598);
+data.setCell(5, 3, 7325);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'studentloginTest')
+data.setCell(6, 1, 'studentsubscribecourseTest')
 data.setCell(6, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
-data.setCell(6, 3, 3689);
+data.setCell(6, 3, 6132);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'logoutTest')
+data.setCell(7, 1, 'studentloginTest')
 data.setCell(7, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
-data.setCell(7, 3, 2783);
+data.setCell(7, 3, 2508);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'logoutTest')
+data.setCell(8, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
+data.setCell(8, 3, 2026);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'teacherevaluatetest')
+data.setCell(9, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
+data.setCell(9, 3, 0);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'studentlogouttest')
+data.setCell(10, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
+data.setCell(10, 3, 0);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'teacherlogintest')
+data.setCell(11, 2, 'com.elearning.functional.TC66CreateTakeTestTest')
+data.setCell(11, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -414,41 +617,47 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">setUp</span>
-                <span class="method-start">45 ms</span>
+                <span class="method-start">28 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">9628 ms</span>
+                <span class="method-start">10449 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createNewTest</span>
-                <span class="method-start">19259 ms</span>
+                <span class="method-start">17777 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addQuestionTest</span>
-                <span class="method-start">43446 ms</span>
+                <span class="method-start">47822 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addsecondQuestionTest</span>
-                <span class="method-start">64037 ms</span>
+                <span class="method-start">72618 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">logoutTest</span>
-                <span class="method-start">124147 ms</span>
+                <span class="method-start">132693 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">studentloginTest</span>
-                <span class="method-start">126933 ms</span>
+                <span class="method-start">134720 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">studentTest</span>
-                <span class="method-start">130624 ms</span>
+                <span class="method-name">studentsubscribecourseTest</span>
+                <span class="method-start">137232 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">studenttaketestTest</span>
+                <span class="method-start">143367 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">135224 ms</span>
+                <span class="method-start">205133 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

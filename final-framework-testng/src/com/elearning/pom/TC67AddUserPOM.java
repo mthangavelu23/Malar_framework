@@ -68,13 +68,22 @@ public class TC67AddUserPOM {
 	}
 
 	public void enterfirstname(String fname) {
+		
 		this.firstnameinput.sendKeys(fname);
+		
 	}
-
+	public String returnfirstname()
+	{
+		return this.firstnameinput.getAttribute("value");
+	}
+	
 	public void enterlastname(String lname) {
 		this.lastnameinput.sendKeys(lname);
 	}
-
+	public String returnlastname()
+	{
+		return this.lastnameinput.getAttribute("value");
+	}
 	public void enteremail(String email) {
 		this.useremail.sendKeys(email);
 	}

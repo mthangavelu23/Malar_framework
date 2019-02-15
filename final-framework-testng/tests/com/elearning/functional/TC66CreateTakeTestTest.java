@@ -82,7 +82,7 @@ public class TC66CreateTakeTestTest {
 	@Test(priority = 2)
 	public void createNewTest() throws Exception {
 		addcoursePOM.clickCourselink();
-		addcoursePOM.sendcourse("1Selenium9");
+		addcoursePOM.sendcourse("1Selenium16");
 		addcoursePOM.clickcoursesubmit();
 		//coursedescPOM.mycoursetab();
 		//tc36reportsendpom.homepgcourseclk();
@@ -157,19 +157,59 @@ public class TC66CreateTakeTestTest {
 	@Test(priority = 7, dependsOnMethods = { "addQuestionTest" }, enabled = true)
 	public void studentsubscribecourseTest() throws Exception {
 		tc66createtaketestpom.coursecatclk();
-		tc66createtaketestpom.searchcourse("1Selenium9");
+		tc66createtaketestpom.searchcourse("1Selenium16");
 		tc66createtaketestpom.searchclk();
-		tc66createtaketestpom.subscribecourse("1Selenium9");
+		tc66createtaketestpom.subscribecourse("1Selenium16");
 		
 	}
 	@Test(priority = 8, dependsOnMethods = { "studentsubscribecourseTest" }, enabled = true)
 	public void studenttaketestTest() throws Exception {
-		tc66createtaketestpom.
-		tc66createtaketestpom.searchcourse("1Selenium9");
+		
+		tc66createtaketestpom.searchcourse("1Selenium16");
 		tc66createtaketestpom.searchclk();
-		tc66createtaketestpom.subscribecourse("1Selenium9");
+		tc66createtaketestpom.specificcourseclk();
+		tc36reportsendpom.testiconclk();
+		tc66createtaketestpom.testlnkclk();
+		tc66createtaketestpom.Starttestclk();
+		tc66createtaketestpom.firstchoicerbclk();
+		tc66createtaketestpom.clicknextquestion();
+		tc66createtaketestpom.secondchoicerbclk();
+		tc66createtaketestpom.clicknextquestion();
+		tc66createtaketestpom.returnhmpgclk();
 		
 	}
+	@Test(priority = 9, dependsOnMethods = { "studenttaketestTest" }, enabled = true)
+	public void studentlogouttest() throws Exception {
+		
+		tc66createtaketestpom.logouticon();
+		tc66createtaketestpom.logoutlnk();
+		
+	}
+	
+	@Test(priority = 10, dependsOnMethods = { "studentlogouttest" }, enabled = true)
+	public void teacherlogintest() throws Exception {
+		
+		loginPOM.sendUserName("mthangavelu111");
+		loginPOM.sendPassword("malar111");
+		loginPOM.clickLoginBtn();
+		
+	}
+	
+	@Test(priority = 11, dependsOnMethods = { "teacherlogintest" }, enabled = true)
+	public void teacherevaluatetest() throws Exception {
+		
+		tc66createtaketestpom.coursecatclk();
+		tc66createtaketestpom.searchcourse("1Selenium16");
+		tc66createtaketestpom.searchclk();
+		tc66createtaketestpom.specificcourseclk();
+		tc36reportsendpom.testiconclk();
+		tc66createtaketestpom.resultsfeedbackclk();
+		tc66createtaketestpom.gradeactivity();
+		reviewpom.sendemailchkbox();
+		reviewpom.correcttestclk();
+		
+	}
+	
 	@AfterClass
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);

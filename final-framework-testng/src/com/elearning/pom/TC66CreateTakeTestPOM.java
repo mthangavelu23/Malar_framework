@@ -24,14 +24,18 @@ public class TC66CreateTakeTestPOM {
 
 	@FindBy(xpath = "//img[@title='Create a new test']")
 	private WebElement createnewtesticon;
+	@FindBy(xpath = "//a[@title='1Selenium14']")
+	private WebElement specificcourse;
 
 	@FindBy(xpath = "//input[@name='exerciseTitle']")
 	private WebElement entertesttitle;
 
-	//@FindBy(xpath = "//button[@id='advanced_params']")
-	//private WebElement advanceds;
-	//@FindBy(xpath = "//div[@id='cke_1_contents']//child::iframe[@class='cke_wysiwyg_frame cke_reset']")
-	//rivate WebElement inframetestcontext;
+	// @FindBy(xpath = "//button[@id='advanced_params']")
+	// private WebElement advanceds;
+	// @FindBy(xpath =
+	// "//div[@id='cke_1_contents']//child::iframe[@class='cke_wysiwyg_frame
+	// cke_reset']")
+	// rivate WebElement inframetestcontext;
 
 	@FindBy(xpath = "//input[@id='exerciseType_0']")
 	private WebElement feedbackrb;
@@ -61,10 +65,12 @@ public class TC66CreateTakeTestPOM {
 	private WebElement multiplechoiceicon;
 	@FindBy(xpath = "//input[@name='questionName']")
 	private WebElement questionname;
-	//@FindBy(xpath = "//div[@id='cke_2_contents']//child::iframe[@class='cke_wysiwyg_frame cke_reset']")
+	// @FindBy(xpath =
+	// "//div[@id='cke_2_contents']//child::iframe[@class='cke_wysiwyg_frame
+	// cke_reset']")
 	@FindBy(xpath = "//iframe[@aria-describedby='cke_111']")
 	private WebElement qfirstchoice;
-	
+
 	// do second . thrid and fourth choice after wroking on first choice
 	@FindBy(xpath = "//input[@class='checkbox'][@value='1']")
 	private WebElement firstchoiceradio;
@@ -97,9 +103,9 @@ public class TC66CreateTakeTestPOM {
 	private WebElement coursesubscribe;
 	@FindBy(xpath = "//a[@title='My courses']")
 	private WebElement hmpgcourselnk;
-	@FindBy(xpath = "//a[contains(text(),'SeleniumCourse5')]")
+	@FindBy(xpath = "//a[contains(text(),'1Selenium16')]")
 	private WebElement mycourselink;
-	@FindBy(xpath = "//tbody//tr[@id='exercise_list_66']")
+	@FindBy(xpath = "//a[contains(@href,'exerciseId=66')]")
 	private WebElement testlink;
 
 	@FindBy(xpath = "//div[@class='question_options']//child::input[@name='choice[73]']")
@@ -108,15 +114,14 @@ public class TC66CreateTakeTestPOM {
 	private WebElement nextquestion;
 	@FindBy(xpath = "//input[@id='choice-74-2']")
 	private WebElement secondchoice;
-	@FindBy(xpath = "//button[@name='save_now']")
-	private WebElement endtest;
-	@FindBy(xpath = "//a[@class='btn btn-primary']")
-	private WebElement returnhomepagebtn;
 
-	@FindBy(xpath = "//img[@title='Results and feedback']//parent::a[contains(@href,'SELENIUMCOURSE5')]")
+	@FindBy(xpath = "//a[@class='btn btn-primary']")
+	private WebElement returncoursehomepagebtn;
+
+	@FindBy(xpath = "//img[@title='Results and feedback']//parent::a[contains(@href,'1Selenium16')]")
 	private WebElement cresultsfeedback;
-	
-	@FindBy(xpath = "//img[@title='Grade activity']//parent::a[contains(@href,'SELENIUMCOURSE5')]")
+
+	@FindBy(xpath = "//img[@title='Grade activity']//parent::a[contains(@href,'1Selenium16')]")
 	private WebElement cgradeactivity;
 
 	public void createnewtest() {
@@ -130,13 +135,14 @@ public class TC66CreateTakeTestPOM {
 	}
 
 	public void atendoftest() {
-		
+
 		this.feedbackrb.click();
 	}
 
 	public void enabletest() {
 		this.enablesttimecb.click();
 	}
+
 	public void timeiconclk() {
 		this.timeicon.click();
 	}
@@ -147,7 +153,6 @@ public class TC66CreateTakeTestPOM {
 		System.out.println("Selecting month");
 		Select sel = new Select(this.timeselectmonth);
 		sel.selectByVisibleText(month);
-		
 
 	}
 
@@ -180,17 +185,16 @@ public class TC66CreateTakeTestPOM {
 	}
 
 //need to add all 3 choices question 
-	public void setfocus(String valuetobody)
-	{
+	public void setfocus(String valuetobody) {
 		driver.switchTo().frame(qfirstchoice);
-		WebElement body=driver.switchTo().activeElement();
+		WebElement body = driver.switchTo().activeElement();
 		body.sendKeys(valuetobody);
 		driver.switchTo().defaultContent();
-		
-		
+
 	}
+
 	public void firstchoicetxt(String firstchoice) {
-		//this.se.clear();
+		// this.se.clear();
 		this.qfirstchoice.sendKeys(firstchoice);
 	}
 
@@ -219,12 +223,12 @@ public class TC66CreateTakeTestPOM {
 		this.coursecat.click();
 
 	}
-	
+
 	public void logouticon() {
 		this.Logouticon.click();
 
 	}
-	
+
 	public void logoutlnk() {
 		this.Logoutlnk.click();
 
@@ -262,6 +266,11 @@ public class TC66CreateTakeTestPOM {
 
 	}
 
+	public void specificcourseclk() {
+
+		this.specificcourse.click();
+	}
+
 	public void testlnkclk() {
 
 		this.testlink.click();
@@ -274,6 +283,16 @@ public class TC66CreateTakeTestPOM {
 
 	public void answerchoiceclk() {
 		this.firstchoice.click();
+	}
+
+	public void clicknextquestion() {
+		this.nextquestion.click();
+
+	}
+
+	public void returnhmpgclk() {
+		this.returncoursehomepagebtn.click();
+
 	}
 
 	public void resultsfeedbackclk() {

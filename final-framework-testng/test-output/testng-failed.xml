@@ -7,9 +7,14 @@
         <methods>
           <include name="setUpBeforeClass"/>
           <include name="addsecondQuestionTest"/>
+          <include name="teacherlogintest"/>
           <include name="addQuestionTest"/>
+          <include name="studenttaketestTest"/>
+          <include name="studentsubscribecourseTest"/>
           <include name="tearDown"/>
+          <include name="teacherevaluatetest"/>
           <include name="createNewTest"/>
+          <include name="studentlogouttest"/>
         </methods>
       </class> <!-- com.elearning.functional.TC66CreateTakeTestTest -->
     </classes>

@@ -84,7 +84,8 @@ public class TC68GetUserDetails {
 				
 		tc67adduserpom.clickadmintab();
 		tc67adduserpom.adduserlink();
-		tc67adduserpom.enterfirstname(fname);
+		tc67adduserpom.enterfirstname("Sita");
+		String fname1 = tc67adduserpom.returnfirstname();
 		tc67adduserpom.enterlastname(lname);
 		tc67adduserpom.enteremail(email);
 		tc67adduserpom.enterphone(phone);
@@ -92,6 +93,7 @@ public class TC68GetUserDetails {
 		//tc67adduserpom.selectpasswordoption();
 		tc67adduserpom.enterpassword(password);
 		tc67adduserpom.adduserbtn();
+		assertEquals(fname,fname1);
 		screenShot.captureScreenShot("user_Created");
 		
 	}
