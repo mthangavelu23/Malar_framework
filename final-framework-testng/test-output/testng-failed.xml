@@ -9,9 +9,11 @@
           <include name="addsecondQuestionTest"/>
           <include name="teacherlogintest"/>
           <include name="addQuestionTest"/>
+          <include name="studentloginTest"/>
           <include name="studenttaketestTest"/>
           <include name="studentsubscribecourseTest"/>
           <include name="tearDown"/>
+          <include name="logoutTest"/>
           <include name="teacherevaluatetest"/>
           <include name="createNewTest"/>
           <include name="studentlogouttest"/>

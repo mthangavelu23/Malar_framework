@@ -26,7 +26,7 @@ public class TC69AddUserNegativePOM {
 	}
 	//@FindBy(xpath = "//div[@class='alert alert-warning']")
 	
-	@FindBy(xpath = "//span[@id='js_alerts']")
+	@FindBy(xpath = "//div[@class='alert alert-warning']")
 	private WebElement alertmsg;
 	
 	@FindBy(xpath = "//a[@title='Administration']")
@@ -106,7 +106,9 @@ public class TC69AddUserNegativePOM {
 	public void chooseprofile(String profile) {
 		Select sel = new Select(this.selectprofile);
 		sel.selectByVisibleText(profile);
-
+		
+		
+				
 	}
 
 	public void adduserbtn() {

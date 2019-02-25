@@ -1,6 +1,7 @@
 package com.elearning.functional;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -94,18 +95,10 @@ public class TC69AddUserNegativeTest {
 		tc67adduserpom.adduserbtn();
 		String expected = "The user has been added:" + " " + firstname + " " + lastname;
 		String actual = tc69addusernegativepom.getalerttext();
-		assertEquals(actual, expected);
+		assertNotEquals(actual, expected);
+		
 
-		// add assertion
-	}
-
-	@Test(priority = 3)
-	public void AssertnewUsercreationTest() throws Exception {
-
-		//String expected = "The user has been added:"+firstname+lastname+"";
-		//String actual = tc69addusernegativepom.getalerttext();
-		//assertEquals(actual, expected);
-
+		
 	}
 
 	@AfterClass

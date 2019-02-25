@@ -22,12 +22,13 @@ import com.elearning.pom.TC38CreateGroupPOM;
 import com.elearning.pom.TC39GenerateReportPOM;
 import com.elearning.pom.TC40CreateProjectPOM;
 import com.elearning.pom.TC66CreateTakeTestPOM;
+import com.elearning.pom.TC70AdminTeacherReportPOM;
 import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class TC66CreateTakeTestTest {
+public class TC70AdminTeacherReportTest {
 
 	private WebDriver driver;
 	private String baseUrl;
@@ -43,6 +44,7 @@ public class TC66CreateTakeTestTest {
 	private TC38CreateGroupPOM tc38creategroup;
 	private TC40CreateProjectPOM tc40createprojectpom;
 	private TC66CreateTakeTestPOM tc66createtaketestpom;
+	private TC70AdminTeacherReportPOM tc70adminteacherpom;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -70,6 +72,7 @@ public class TC66CreateTakeTestTest {
 		tc39generatereport = new TC39GenerateReportPOM(driver);
 		tc40createprojectpom = new TC40CreateProjectPOM(driver);
 		tc66createtaketestpom = new TC66CreateTakeTestPOM(driver);
+		tc70adminteacherpom = new TC70AdminTeacherReportPOM(driver);
 	}
 
 	@Test(priority = 1)
@@ -82,11 +85,8 @@ public class TC66CreateTakeTestTest {
 
 	@Test(priority = 2)
 	public void createNewTest() throws Exception {
-		addcoursePOM.clickCourselink();
-		addcoursePOM.sendcourse("1Selenium30");
-		addcoursePOM.clickcoursesubmit();
-		//coursedescPOM.mycoursetab();
-		//tc36reportsendpom.homepgcourseclk();
+		coursedescPOM.mycoursetab();
+		tc66createtaketestpom.specificcourseclk();
 		tc36reportsendpom.testiconclk();
 		tc66createtaketestpom.createnewtest();
 		tc66createtaketestpom.testname("1em");
@@ -96,12 +96,12 @@ public class TC66CreateTakeTestTest {
 		tc66createtaketestpom.enabletest();
 		//WebDriver wait = new WebDriver()
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("window.scrollBy(0,1000)");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1000)");
 		tc66createtaketestpom.timeiconclk();
 		//tc66createtaketestpom.selectmonth("Feb");
 		//tc66createtaketestpom.selectyear("2019");
-		tc66createtaketestpom.selectday("21");
+		tc66createtaketestpom.selectday("11");
 		tc66createtaketestpom.passpercent("60");
 		tc66createtaketestpom.proceedquestions();
 
@@ -140,33 +140,42 @@ public class TC66CreateTakeTestTest {
 		tc66createtaketestpom.secondchoicerbclk();
 		tc66createtaketestpom.addquestionclk();
 		tc66createtaketestpom.previewclk();
-		//insert assertion - TO SEE IF start button dsplayed
+		
 	}
-
-	@Test(priority = 5, dependsOnMethods = { "addQuestionTest" }, enabled = true)
+	@Test(priority = 5, dependsOnMethods = { "addsecondQuestionTest" }, enabled = true)
+	public void teacherTakeTest() throws Exception {
+	
+		tc66createtaketestpom.Starttestclk();
+		tc66createtaketestpom.firstchoicerbclk();
+		tc66createtaketestpom.clicknextquestion();
+		tc66createtaketestpom.secondchoicerbclk();
+		tc66createtaketestpom.clicknextquestion();
+	
+	}
+	@Test(priority = 6, dependsOnMethods = { "addQuestionTest" }, enabled = true)
 	public void logoutTest() throws Exception {
 	
 		tc66createtaketestpom.logouticon();
 		tc66createtaketestpom.logoutlnk();
 	
 	}
-	@Test(priority = 6, dependsOnMethods = { "logoutTest" }, enabled = true)	
-	public void studentloginTest() throws Exception {
-		loginPOM.sendUserName("Ashwin111");
-		loginPOM.sendPassword("ashwin111");
+	@Test(priority = 7, dependsOnMethods = { "logoutTest" }, enabled = true)	
+	public void adminloginTest() throws Exception {
+		loginPOM.sendUserName("admin");
+		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn();
 	}
 	
-	@Test(priority = 7, dependsOnMethods = { "addQuestionTest" }, enabled = true)
+	@Test(priority = 8, dependsOnMethods = { "addQuestionTest" }, enabled = true)
 	public void studentsubscribecourseTest() throws Exception {
 		tc66createtaketestpom.coursecatclk();
-		tc66createtaketestpom.searchcourse("1Selenium30");
+		tc66createtaketestpom.searchcourse("1Selenium28");
 		tc66createtaketestpom.searchclk();
 		//tc66createtaketestpom.mycourselink();
-		tc66createtaketestpom.subscribecourse("1Selenium30");
+		tc66createtaketestpom.subscribecourse("1Selenium28");
 		
 	}
-	@Test(priority = 8, dependsOnMethods = { "studentsubscribecourseTest" }, enabled = true)
+	@Test(priority = 9, dependsOnMethods = { "studentsubscribecourseTest" }, enabled = true)
 	public void studenttaketestTest() throws Exception {
 		
 		coursedescPOM.mycoursetab();
@@ -202,7 +211,7 @@ public class TC66CreateTakeTestTest {
 	public void teacherevaluatetest() throws Exception {
 		
 		tc66createtaketestpom.coursecatclk();
-		tc66createtaketestpom.searchcourse("1Selenium30");
+		tc66createtaketestpom.searchcourse("1Selenium28");
 		tc66createtaketestpom.searchclk();
 		tc66createtaketestpom.specificcourseclk();
 		tc36reportsendpom.testiconclk();

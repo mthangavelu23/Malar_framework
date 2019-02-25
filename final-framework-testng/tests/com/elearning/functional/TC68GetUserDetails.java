@@ -86,21 +86,27 @@ public class TC68GetUserDetails {
 		tc67adduserpom.adduserlink();
 		tc67adduserpom.enterfirstname("Sita");
 		String fname1 = tc67adduserpom.returnfirstname();
-		tc67adduserpom.enterlastname(lname);
-		tc67adduserpom.enteremail(email);
-		tc67adduserpom.enterphone(phone);
-		tc67adduserpom.enterloginname(userlogin);
+		tc67adduserpom.enterlastname("Rama");
+		String lname1 = tc67adduserpom.returnlastname();
+		tc67adduserpom.enteremail("ram@gmail.com");
+		String email1 = tc67adduserpom.returnemail();
+		tc67adduserpom.enterphone("9999999999");
+		String phone1 = tc67adduserpom.returnphone();
+		tc67adduserpom.enterloginname("ram111");
+		String userlogin1 = tc67adduserpom.returnloginname();
 		//tc67adduserpom.selectpasswordoption();
-		tc67adduserpom.enterpassword(password);
+		tc67adduserpom.enterpassword("ram111");
+		String password1 = tc67adduserpom.returnloginpassword();
 		tc67adduserpom.adduserbtn();
 		assertEquals(fname,fname1);
+		assertEquals(lname,lname1);
+		assertEquals(userlogin,userlogin1);
 		screenShot.captureScreenShot("user_Created");
 		
 	}
 	
 	@AfterClass
 	public void tearDown() throws Exception {
-		Thread.sleep(1000);
 		driver.quit();
 	}
 

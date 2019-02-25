@@ -87,14 +87,26 @@ public class TC67AddUserPOM {
 	public void enteremail(String email) {
 		this.useremail.sendKeys(email);
 	}
+	public String returnemail()
+	{
+		return this.useremail.getAttribute("value");
+	}
 
 	public void enterphone(String phone) {
 		this.userphonenumber.sendKeys(phone);
+	}
+	public String returnphone()
+	{
+		return this.userphonenumber.getAttribute("value");
 	}
 
 	public void enterloginname(String login) {
 		this.loginusername.sendKeys(login);
 		this.loginusername.sendKeys(Keys.TAB);
+	}
+	public String returnloginname()
+	{
+		return this.loginusername.getAttribute("value");
 	}
 
 	public void selectpasswordoption() throws AWTException {
@@ -108,6 +120,10 @@ public class TC67AddUserPOM {
 		this.loginpassword.sendKeys(Keys.TAB);
 	}
 
+	public String returnloginpassword()
+	{
+		return this.loginpassword.getAttribute("value");
+	}
 	public void chooseprofile(String profile) {
 		Select sel = new Select(this.selectprofile);
 		sel.selectByVisibleText(profile);

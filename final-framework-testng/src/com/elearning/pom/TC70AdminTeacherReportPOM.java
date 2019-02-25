@@ -14,18 +14,18 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.training.utility.Driver;
 
-public class TC66CreateTakeTestPOM {
+public class TC70AdminTeacherReportPOM {
 
 	private WebDriver driver;
 
-	public TC66CreateTakeTestPOM(WebDriver driver) {
+	public TC70AdminTeacherReportPOM(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(xpath = "//img[@title='Create a new test']")
 	private WebElement createnewtesticon;
-	@FindBy(xpath = "//img[@title='1Selenium30']")
+	@FindBy(xpath = "//img[@title='1Selenium28']")
 	private WebElement specificcourse;
 
 	@FindBy(xpath = "//input[@name='exerciseTitle']")
@@ -104,9 +104,9 @@ public class TC66CreateTakeTestPOM {
 	private WebElement coursesubscribe;
 	@FindBy(xpath = "//a[@title='My courses']")
 	private WebElement hmpgcourselnk;
-	@FindBy(xpath = "//a[contains(text(),'1Selenium30')]")
+	@FindBy(xpath = "//a[contains(text(),'1Selenium28')]")
 	private WebElement mycourselink;
-	@FindBy(xpath = "//a[contains(@href,'1Selenium30')][contains(text(),'1em')]")
+	@FindBy(xpath = "//a[contains(@href,'1Selenium28')][contains(text(),'1em')]")
 	private WebElement testlink;
 
 	@FindBy(xpath = "//div[@class='question_options']//child::input[@name='choice[73]']")
@@ -119,10 +119,10 @@ public class TC66CreateTakeTestPOM {
 	@FindBy(xpath = "//a[@class='btn btn-primary']")
 	private WebElement returncoursehomepagebtn;
 
-	@FindBy(xpath = "//img[@title='Results and feedback']//parent::a[contains(@href,'1Selenium30')]")
+	@FindBy(xpath = "//img[@title='Results and feedback']//parent::a[contains(@href,'1Selenium28')]")
 	private WebElement cresultsfeedback;
 
-	@FindBy(xpath = "//img[@title='Grade activity']//parent::a[contains(@href,'1Selenium30')]")
+	@FindBy(xpath = "//img[@title='Grade activity']//parent::a[contains(@href,'1Selenium28')]")
 	private WebElement cgradeactivity;
 
 	public void createnewtest() {
@@ -138,8 +138,7 @@ public class TC66CreateTakeTestPOM {
 	public void atendoftest() {
 
 		this.feedbackrb.click();
-		//this.feedbackrb.click()
-		}
+	}
 
 	public void enabletest() {
 		this.enablesttimecb.click();
